@@ -17,8 +17,18 @@ go mod init github.com/camcahoon/practice (example)
 
 Push to a repo:
 git add [file name]
+
 git commit
+
 git push
+
+When committing, either use git commit -m "commit message" or use vi
+
+When using vi, to write and quit do:
+:wq
+
+Check what is ready to be added:
+git status
 
 Set up a binary/build thing:
 go build
