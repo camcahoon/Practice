@@ -14,3 +14,14 @@ cd [directory name]
 
 Setup go in a dirctory:
 go mod init github.com/camcahoon/practice (example)
+
+Push to a repo:
+git add [file name]
+git commit
+git push
+
+Set up a binary/build thing:
+go build
+
+Use the binary:
+./[binary name]
