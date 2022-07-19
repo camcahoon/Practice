@@ -35,3 +35,6 @@ go build
 
 Use the binary:
 ./[binary name]
+
+Run a Go program:
+go run [file name]
