@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"fmt"
 	"io"
 	"os"
 	"strconv"
@@ -16,7 +17,19 @@ import (
 
 func plusMinus(arr []int32) {
 	// Write your code here
-
+	pos, neg, zero := 0.0, 0.0, 0.0
+	for _, value := range arr {
+		if value > 0 {
+			pos++
+		} else if value < 0 {
+			neg++
+		} else {
+			zero++
+		}
+	}
+	fmt.Printf("%.6f\n", pos/float64(len(arr)))
+	fmt.Printf("%.6f\n", neg/float64(len(arr)))
+	fmt.Printf("%.6f\n", zero/float64(len(arr)))
 }
 
 func main() {
