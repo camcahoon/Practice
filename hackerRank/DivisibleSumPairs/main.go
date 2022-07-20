@@ -35,12 +35,12 @@ func divisibleSumPairs(n int32, k int32, ar []int32) int32 {
 func main() {
 	reader := bufio.NewReaderSize(os.Stdin, 16*1024*1024)
 
-	stdout, err := os.Create(os.Getenv("OUTPUT_PATH"))
-	checkError(err)
+	//stdout, err := os.Create(os.Getenv("OUTPUT_PATH"))
+	//checkError(err)
 
-	defer stdout.Close()
+	//defer stdout.Close()
 
-	writer := bufio.NewWriterSize(stdout, 16*1024*1024)
+	//writer := bufio.NewWriterSize(stdout, 16*1024*1024)
 
 	firstMultipleInput := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
@@ -65,9 +65,11 @@ func main() {
 
 	result := divisibleSumPairs(n, k, ar)
 
-	fmt.Fprintf(writer, "%d\n", result)
+	fmt.Printf("%d\n", result)
 
-	writer.Flush()
+	//fmt.Fprintf(writer, "%d\n", result)
+
+	//writer.Flush()
 }
 
 func readLine(reader *bufio.Reader) string {

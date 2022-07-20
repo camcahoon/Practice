@@ -37,12 +37,12 @@ func breakingRecords(scores []int32) []int32 {
 func main() {
 	reader := bufio.NewReaderSize(os.Stdin, 16*1024*1024)
 
-	stdout, err := os.Create(os.Getenv("OUTPUT_PATH"))
-	checkError(err)
+	//stdout, err := os.Create(os.Getenv("OUTPUT_PATH"))
+	//checkError(err)
 
-	defer stdout.Close()
+	//defer stdout.Close()
 
-	writer := bufio.NewWriterSize(stdout, 16*1024*1024)
+	//writer := bufio.NewWriterSize(stdout, 16*1024*1024)
 
 	nTemp, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
 	checkError(err)
@@ -62,16 +62,20 @@ func main() {
 	result := breakingRecords(scores)
 
 	for i, resultItem := range result {
-		fmt.Fprintf(writer, "%d", resultItem)
+		//fmt.Fprintf(writer, "%d", resultItem)
+		fmt.Printf("%d", resultItem)
 
 		if i != len(result)-1 {
-			fmt.Fprintf(writer, " ")
+			//fmt.Fprintf(writer, " ")
+			fmt.Print(" ")
 		}
 	}
 
-	fmt.Fprintf(writer, "\n")
+	fmt.Print("\n")
 
-	writer.Flush()
+	//fmt.Fprintf(writer, "\n")
+
+	//writer.Flush()
 }
 
 func readLine(reader *bufio.Reader) string {

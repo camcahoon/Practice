@@ -41,20 +41,22 @@ func timeConversion(s string) string {
 func main() {
 	reader := bufio.NewReaderSize(os.Stdin, 16*1024*1024)
 
-	stdout, err := os.Create(os.Getenv("OUTPUT_PATH"))
-	checkError(err)
+	//stdout, err := os.Create(os.Getenv("OUTPUT_PATH"))
+	//checkError(err)
 
-	defer stdout.Close()
+	//defer stdout.Close()
 
-	writer := bufio.NewWriterSize(stdout, 16*1024*1024)
+	//writer := bufio.NewWriterSize(stdout, 16*1024*1024)
 
 	s := readLine(reader)
 
 	result := timeConversion(s)
 
-	fmt.Fprintf(writer, "%s\n", result)
+	fmt.Printf("%s\n", result)
 
-	writer.Flush()
+	//fmt.Fprintf(writer, "%s\n", result)
+
+	//writer.Flush()
 }
 
 func readLine(reader *bufio.Reader) string {
