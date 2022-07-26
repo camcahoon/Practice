@@ -20,6 +20,10 @@ Push to a repo:
 - git commit
 - git push
 
+Push to a new branch:
+- git checkout -b [branch name]
+- git push origin [branch name]
+
 When committing, either use git commit -m "commit message" or use vi
 
 When using vi, to write and quit do:  
