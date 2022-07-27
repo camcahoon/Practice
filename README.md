@@ -24,6 +24,10 @@ Push to a new branch:
 - git checkout -b [branch name]
 - git push origin [branch name]
 
+Delete a local branch:
+- git branch -d [branch name]
+- git branch -D [branch name] (if the former gives an error)
+
 When committing, either use git commit -m "commit message" or use vi
 
 When using vi, to write and quit do:  
